@@ -347,7 +347,7 @@ int main(int argc,char** argv)
     unsigned int nIndex  = 0;
     while (true)
     {
-        LOG("Please enter the index of the camera to be connected��\n");
+        LOG("Please enter the index of the camera to be connected\n");
         scanf("%d",&nIndex);
         LOG("Connected camera index:%d \r\n", nIndex);
 
