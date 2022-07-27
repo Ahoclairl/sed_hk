@@ -2,7 +2,7 @@
 
 基于海康 MV-EB435i 型号 RGB-D 相机 SDK 二次开发的**落差环境边缘检测(Staircase Environment Detector)**算法说明
 
-![Example](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E5%AE%9E%E6%B5%8B.png) 
+![Example](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E5%AE%9E%E6%B5%8B.png?raw=true) 
 ## 1.安装步骤
 
 a. 解压后打开，进入主目录 */sed_hk*
