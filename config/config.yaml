@@ -33,7 +33,7 @@ test_line: false
 # m_aeps: 角度精度参数  表示直线角度的精度，建议取 0.01
 #-----------------------------------------------
 m_deVal: 0.004
-m_biasCol: 10
+m_biasCol: 5
 m_biasRow: 4
 m_gapCol: 1
 m_gapRow: 5
