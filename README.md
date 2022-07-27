@@ -10,7 +10,7 @@ b. 通过深度差算法检测与地面有一定垂直关系的障碍物**曲线
 
 具体算法原理参见：
 
-![Example](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E5%AE%9E%E6%B5%8B.png?raw=true)
+![Example](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E5%AE%9E%E6%B5%8B.png?raw=true "边缘检测实例")
 
 ## 1.安装步骤
 
@@ -44,7 +44,7 @@ c. 编译
 
 出现如下提示即可顺利运行程序：
 
-![test](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95.png)
+![test](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95.png "程序正常运行提示")
 
 ## 2.使用说明
 
