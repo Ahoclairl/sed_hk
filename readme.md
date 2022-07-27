@@ -35,7 +35,7 @@ c. 编译
 
 出现如下提示即可顺利运行程序：
 
-![test](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95.png)
+![test](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95.png?raw=true)
 ## 2.使用说明
 
 算法原理参见：
@@ -49,4 +49,4 @@ a. 运行程序前要**确保深度图和彩色图的尺寸相同**，可以进�
 
 b. **该算法需要保证相机与墙面保持一定平行度**
 
-c. 存在由于光照条件或曝光原因导致有效深度*（如阶梯边缘）*丢失而造成的检测偏移
+c. 存在由于光照条件或曝光原因导致有效深度(*如阶梯边缘*)丢失而造成的检测偏移
