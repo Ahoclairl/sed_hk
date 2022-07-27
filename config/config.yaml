@@ -1,0 +1,46 @@
+%YAML: 1.0
+
+# 全局变量
+#-----------------------------------------------
+# img_width: 标准图像宽度
+# img_height: 标准图像高度
+# roi_x: 目标框在标准图像中的起点横坐标
+# roi_y: 目标框在标准图像中的起点纵坐标
+# roi_width: 目标框宽度
+# roi_height: 目标框高度
+#-----------------------------------------------
+img_width: 1280
+img_height: 720
+roi_x: 390
+roi_y: 500
+roi_width: 500
+roi_height: 180
+test_line: false
+
+# 成员变量
+#-----------------------------------------------
+# m_deVal: 深度差阈值
+# m_biasCol: 深度差矩形框的纵坐标偏差
+# m_biasRow: 深度差矩形框的横坐标偏差
+# m_gapCol: 二值图纵坐标间隔，该参数会极大影响获得的 binary_raw 图质量，慎重修改
+# m_gapRow: 二值图横坐标间隔
+# m_gapVal: 二值图间隔阈值
+# m_numPoint: 左 / 右储存点个数
+# m_biasX: 深度图与彩色图横坐标偏差
+# m_biasY: 深度图与彩色图纵坐标偏差
+# m_param: 距离参数  
+# m_reps: 径向的精度参数  表示直线到原点距离的精度，建议取 0.01; 设为0，则自动选用最优值
+# m_aeps: 角度精度参数  表示直线角度的精度，建议取 0.01
+#-----------------------------------------------
+m_deVal: 0.004
+m_biasCol: 5
+m_biasRow: 4
+m_gapCol: 1
+m_gapRow: 5
+m_gapVal: 3
+m_numPoint: 100
+m_biasX: 25
+m_biasY: 0
+m_param: 0
+m_reps: 0.01
+m_aeps: 0.01
