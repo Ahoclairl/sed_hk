@@ -8,13 +8,32 @@
 # roi_y: 目标框在标准图像中的起点纵坐标
 # roi_width: 目标框宽度
 # roi_height: 目标框高度
+
+# 720p 参考参数：
+# img_width: 1280
+# img_height: 720
+# roi_x: 390
+# roi_y: 500
+# roi_width: 500
+# roi_height: 180
+
+# 360p 参考参数：
+# img_width: 640
+# img_height: 360
+# roi_x: 100
+# roi_y: 200
+# roi_width: 440
+# roi_height: 120
+
 #-----------------------------------------------
-img_width: 1280
-img_height: 720
-roi_x: 390
-roi_y: 500
-roi_width: 500
-roi_height: 180
+rgb_topic: "/hkcamera/rgb"
+depth_topic: "/hkcamera/depth"
+img_width: 640
+img_height: 360
+roi_x: 100
+roi_y: 200
+roi_width: 440
+roi_height: 120
 test_line: false
 
 # 成员变量
