@@ -1,7 +1,7 @@
 #ifndef SAMPLE_COMMON_RENDERIMAGE_HPP_
 #define SAMPLE_COMMON_RENDERIMAGE_HPP_
 
-#include "RenderWindow.hpp"
+#include "include/RenderWindow.hpp"
 
 using namespace RenderImage;
 
@@ -71,16 +71,16 @@ static void YUV422_T_RGB(unsigned int nWidth, unsigned int nHeight,const unsigne
         pixel_24[0] = (pixel32 & 0x000000ff);
         pixel_24[1] = (pixel32 & 0x0000ff00) >> 8;
         pixel_24[2] = (pixel32 & 0x00ff0000) >> 16;
-        pRGBDst[out++] = pixel_24[2];
-        pRGBDst[out++] = pixel_24[1];
         pRGBDst[out++] = pixel_24[0];
+        pRGBDst[out++] = pixel_24[1];
+        pRGBDst[out++] = pixel_24[2];
         pixel32 = CoverYuv422_T_RGB_Pixel(y1, u, v);
         pixel_24[0] = (pixel32 & 0x000000ff);
         pixel_24[1] = (pixel32 & 0x0000ff00) >> 8;
         pixel_24[2] = (pixel32 & 0x00ff0000) >> 16;
-        pRGBDst[out++] = pixel_24[2];
-        pRGBDst[out++] = pixel_24[1];
         pRGBDst[out++] = pixel_24[0];
+        pRGBDst[out++] = pixel_24[1];
+        pRGBDst[out++] = pixel_24[2];
     }
     return;
 }
