@@ -1,6 +1,6 @@
 # SED_HK
 
-## 适用平台：LINUX系统下的ROS平台
+**适用平台：LINUX系统下的ROS平台**
 
 基于海康 MV-EB435i 型号 RGB-D 相机 SDK 二次开发的**ROS平台下落差环境边缘检测(Staircase Environment Detector)算法说明**
 
