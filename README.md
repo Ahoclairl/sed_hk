@@ -30,6 +30,8 @@ c. 回到工作目录，打开终端进行编译
     catkin_make
     ```
 
+## 2.启动步骤
+
 安装完成后将 MV-EB435i 通过 *USB3.0* 数据线连接电脑，输入以下代码检测设备：
 
     ```
@@ -49,11 +51,9 @@ c. 回到工作目录，打开终端进行编译
     rosrun sed_hk sed_hk_client
     ```
 
-出现如下提示即可顺利运行程序：
+**当需要关闭程序时，先在客户端终端下按 *c* 或 *q*，待相机和客户端停止运作后再关闭服务器**
 
-![test](https://github.com/Ahoclairl/sed_hk/blob/master/pic/%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95.png "程序正常运行提示")
-
-## 2.使用说明
+## 3.使用说明
 
 修改 *config/cam.yaml: flag_largeImg* 可以切换 **720p / 360p** 图像模式，*true* 为 *720p*，*false* 为 *360p*
 
@@ -63,7 +63,7 @@ c. 回到工作目录，打开终端进行编译
 
 修改 *config/config.yaml: m_biasX / m_biasY* 可以修正深度图与彩色图检测点的偏移
 
-## 3.注意事项
+## 4.注意事项
 
 a. 运行程序前要**确保深度图和彩色图的尺寸相同**，可以进入 *“/sed_hk/config/config.yaml”* 修改全局变量中图片与目标框的尺寸
 
