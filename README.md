@@ -16,20 +16,14 @@ c. 通过深度差算法检测与地面有一定垂直关系的障碍物**曲线
 
 ## 1.安装步骤
 
-a. 打开安装包，进入主目录 *“/sed_hk”*
+a. 打开安装包，将主目录 *“/sed_hk”* 添加进工作空间下的 *“src”* 文件夹
 
-b. 在主目录下打开终端
+b. 设置主目录中的 *CMakeLists.txt* 文件，检查 *cv_bridge* 文件夹路径和 *Open_CV* 版本号
 
-c. 编译
+c. 回到工作目录，打开终端进行编译
 
     ```
-    mkdir build
-
-    cd build
-
-    cmake ..
-
-    make
+    catkin_make
     ```
 
 安装完成后将 MV-EB435i 通过 *USB3.0* 数据线连接电脑，输入以下代码检测设备：
@@ -38,10 +32,17 @@ c. 编译
     lsusb
     ```
 
-检测到设备后在主目录下**以 root 权限进入终端**，输入以下代码运行程序：
+检测到设备后**先进入工作空间，启动相应 launch 文件**：
 
     ```
-    ./build/sed
+    roslaunch sed_hk sed_hk.launch
+    ```
+
+看到提示语后再在工作目录下新建终端，**并以 root 权限进入终端**，输入以下代码运行程序：
+
+    ```
+    source ./devel/setup.bash
+    rosrun sed_hk sed_hk_client
     ```
 
 出现如下提示即可顺利运行程序：
@@ -50,9 +51,13 @@ c. 编译
 
 ## 2.使用说明
 
-修改 *test_line* 可以切换 **曲线 / 直线** 检测模式，*true* 为直线检测，*false* 为曲线检测
+修改 *config/cam.yaml: flag_largeImg* 可以切换 **720p / 360p** 图像模式，*true* 为 *720p*，*false* 为 *360p*
 
-修改 *m_biasX / m_biasY* 可以修正深度图与彩色图检测点的偏移
+**在 *config/cam.yaml* 中修改分辨率后，还需要修改 *config/config.yaml* 中对应的图像及目标框参数**
+
+修改 *config/config.yaml: test_line* 可以切换 **曲线 / 直线** 检测模式，*true* 为直线检测，*false* 为曲线检测
+
+修改 *config/config.yaml: m_biasX / m_biasY* 可以修正深度图与彩色图检测点的偏移
 
 ## 3.注意事项
 
