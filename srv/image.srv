@@ -1,0 +1,7 @@
+# 请求响应的数据
+sensor_msgs/Image rgb
+sensor_msgs/Image depth
+sensor_msgs/CameraInfo camInfo
+---
+# 回复响应的数据
+string result
