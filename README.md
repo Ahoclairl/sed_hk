@@ -55,11 +55,11 @@ c. 回到工作目录，打开终端进行编译
 
 ## 3.使用说明
 
-修改 *config/cam.yaml: flag_largeImg* 可以切换 **720p / 360p** 图像模式，*true* 为 *720p*，*false* 为 *360p*
+修改 *config/cam.yaml: flag_largeImg* 可以切换 **720p / 360p** 图像模式，**true** 为 **720p**，**false** 为 **360p**
 
 **在 *config/cam.yaml* 中修改分辨率后，还需要修改 *config/config.yaml* 中对应的图像及目标框参数**
 
-修改 *config/config.yaml: test_line* 可以切换 **曲线 / 直线** 检测模式，*true* 为直线检测，*false* 为曲线检测
+修改 *config/config.yaml: test_line* 可以切换 **曲线 / 直线** 检测模式，**true** 为直线检测，**false** 为曲线检测
 
 修改 *config/config.yaml: m_biasX / m_biasY* 可以修正深度图与彩色图检测点的偏移
 
