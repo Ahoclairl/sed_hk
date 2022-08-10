@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-
-    <node name="sed_hk_server" pkg="sed_hk" type="sed_hk_server" output="screen"/>
-    
-</launch>
