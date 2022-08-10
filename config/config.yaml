@@ -7,6 +7,7 @@
 # m_roiY: 目标框在标准图像中的起点纵坐标
 # m_roiWidth: 目标框宽度
 # m_roiHeight: 目标框高度
+# m_flagRT: 实时检测标记
 # m_flagLine: 直线检测标记
 # m_deVal: 深度差阈值
 # m_biasRow: 深度差矩形框的纵坐标偏差
@@ -27,6 +28,7 @@ m_roiX: 100
 m_roiY: 200
 m_roiWidth: 440
 m_roiHeight: 120
+m_flagRT: true
 m_flagLine: false
 m_deVal: 0.004
 m_biasRow: 5
@@ -36,7 +38,7 @@ m_gapVal: 3
 m_rangeVal: 10
 m_numPoint: 100
 m_biasX: 10
-m_biasY: 0
+m_biasY: -10
 m_param: 0
 m_reps: 0.01
 m_aeps: 0.01
