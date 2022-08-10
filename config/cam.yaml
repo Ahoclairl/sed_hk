@@ -1,0 +1,13 @@
+%YAML: 1.0
+
+# 主要相机参数
+#-----------------------------------------------
+# m_flagLargeImg: 是否使用大图模式
+# m_imgSizeL: 720p分辨率
+# m_imgSizeS: 360p分辨率
+# m_exposureTime: 曝光时间
+#-----------------------------------------------
+m_flagLargeImg: false
+m_imgSizeL: 65537
+m_imgSizeS: 131074
+m_exposureTime: 2000

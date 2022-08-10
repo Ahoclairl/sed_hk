@@ -1,0 +1,55 @@
+%YAML: 1.0
+# 成员变量
+#-----------------------------------------------
+# m_rgbTopic: 彩色话题
+# m_depthTopic: 深度话题
+# m_roiX: 目标框在标准图像中的起点横坐标
+# m_roiY: 目标框在标准图像中的起点纵坐标
+# m_roiWidth: 目标框宽度
+# m_roiHeight: 目标框高度
+# m_flagLine: 直线检测标记
+# m_deVal: 深度差阈值
+# m_biasRow: 深度差矩形框的纵坐标偏差
+# m_gapRow: 二值图纵坐标间隔，该参数会极大影响获得的 binary_raw 图质量，慎重修改
+# m_gapCol: 二值图横坐标间隔
+# m_gapVal: 二值图间隔阈值
+# m_rangeVal: 纵坐标范围
+# m_numPoint: 左 / 右储存点个数
+# m_biasX: 深度图与彩色图横坐标偏差
+# m_biasY: 深度图与彩色图纵坐标偏差
+# m_param: 距离参数  
+# m_reps: 径向的精度参数  表示直线到原点距离的精度，建议取 0.01; 设为0，则自动选用最优值
+# m_aeps: 角度精度参数  表示直线角度的精度，建议取 0.01
+#-----------------------------------------------
+m_rgbTopic: "/hkcamera/rgb"
+m_depthTopic: "/hkcamera/depth"
+m_roiX: 100
+m_roiY: 200
+m_roiWidth: 440
+m_roiHeight: 120
+m_flagLine: false
+m_deVal: 0.004
+m_biasRow: 5
+m_gapRow: 1
+m_gapCol: 5
+m_gapVal: 3
+m_rangeVal: 10
+m_numPoint: 100
+m_biasX: 10
+m_biasY: 0
+m_param: 0
+m_reps: 0.01
+m_aeps: 0.01
+#-----------------------------------------------
+# 720p 参考参数：
+# m_roiX: 390
+# m_roiY: 500
+# m_roiWidth: 500
+# m_roiHeight: 180
+
+# 360p 参考参数：
+# m_roiX: 100
+# m_roiY: 200
+# m_roiWidth: 440
+# m_roiHeight: 120
+#-----------------------------------------------
