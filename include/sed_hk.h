@@ -51,6 +51,9 @@ public:
     // *** 绘图函数 ***
     void paint();
 
+    // *** 返回实时标记 ***
+    bool isRT();
+
 private:
     ros::NodeHandle nh_;
     image_transport::ImageTransport it_;
@@ -81,9 +84,6 @@ private:
     int m_roiWidth;
     int m_roiHeight;
 
-    // *** 直线检测标记 ***
-    bool m_flagLine;
-
     // *** 遍历间隔 ***
     int m_gapRow;
     int m_gapCol;
@@ -109,6 +109,12 @@ private:
     double m_param;
     double m_reps;
     double m_aeps;
+
+    // *** 实时检测标记 ***
+    bool m_flagRT;
+
+    // *** 直线检测标记 ***
+    bool m_flagLine;
 
     // *** 边缘标记 ***
     bool m_flagEdge;
