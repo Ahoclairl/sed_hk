@@ -31,6 +31,7 @@ void Sed_hk::initialProcess(){
     m_roiY = config["m_roiY"].as<int>();
     m_roiWidth = config["m_roiWidth"].as<int>();
     m_roiHeight = config["m_roiHeight"].as<int>();
+    m_flagRT = config["m_flagRT"].as<bool>();
     m_flagLine = config["m_flagLine"].as<bool>();
     m_deVal = config["m_deVal"].as<float>();
     m_gapCol = config["m_gapCol"].as<int>();
@@ -73,12 +74,14 @@ void Sed_hk::rgbCb(const sensor_msgs::ImageConstPtr &msg){
         m_imgWidth = rgbPtr->image.cols;
         m_imgHeight = rgbPtr->image.rows;
     }
-    // *** roi ***
-    cv::rectangle(rgbPtr->image, cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight), cv::Scalar(0, 255, 0), 1);
-    // *** 相机中线 ***
-    cv::line(rgbPtr->image, cv::Point(m_imgWidth / 2, m_roiY), cv::Point(m_imgWidth / 2, m_roiY + m_roiHeight), cv::Scalar(255, 0, 0), 1);
-    cv::imshow("RGB_WINDOW", rgbPtr->image);
-    cv::waitKey(1);
+    if(!m_flagRT){
+        // *** roi ***
+        cv::rectangle(rgbPtr->image, cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight), cv::Scalar(0, 255, 0), 1);
+        // *** 相机中线 ***
+        cv::line(rgbPtr->image, cv::Point(m_imgWidth / 2, m_roiY), cv::Point(m_imgWidth / 2, m_roiY + m_roiHeight), cv::Scalar(255, 0, 0), 1);
+        cv::imshow("RGB_WINDOW", rgbPtr->image);
+        cv::waitKey(1);
+    }
 }
 
 // *** 深度图回调函数　***
@@ -98,9 +101,14 @@ void Sed_hk::depthCb(const sensor_msgs::ImageConstPtr &msg){
     }
     cv::imshow("DEPTH_WINDOW", 10 * depthPtr->image);
     cv::waitKey(1);
-    // *** 配合主函数提示信息，按 's' 检测 ***
-    if(cv::waitKey(33) == 's'){
+    // *** 实时检测 ***
+    if(m_flagRT){
         depthProcess();
+    }else{
+        // *** 配合主函数提示信息，按 's' 检测 ***
+        if(cv::waitKey(33) == 's'){
+            depthProcess();
+        }
     }
 }
 
@@ -114,10 +122,12 @@ void Sed_hk::depthProcess(){
     int ry = 0;
     int num = 0;
     m_sp = pointAround(m_edgeL, flagSp, count, ry, num, m_roiWidth / 2);
-    if(m_flagLine){
-        cout << "———————————— 单帧直线检测完成" << endl;
-    }else{
-        cout << "———————————— 单帧曲线检测完成" << endl;
+    if(!m_flagRT){
+        if(m_flagLine){
+            cout << "———————————— 单帧直线检测完成" << endl;
+        }else{
+            cout << "———————————— 单帧曲线检测完成" << endl;
+        }
     }
     // *** 计算边缘点 ***
     edgeDetect(m_sp[1] - m_roiY);
@@ -293,9 +303,23 @@ void Sed_hk::paint(){
             }
             cv::line(m_rgbImage, cv::Point(m_edgeL[2], m_edgeL[3]), cv::Point(m_edgeR[2], m_edgeR[3]), cv::Scalar(255, 0, 0), 2);
         }
-        // *** 输出深度图 ***
-        cv::imshow("DEPTH", 10 * m_depthImage(cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight)));
-        // *** 输出边缘线 ***
-        cv::imshow("EDGE", m_rgbImage(cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight)));
+        if(m_flagRT){
+            // *** roi ***
+            cv::rectangle(m_rgbImage, cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight), cv::Scalar(0, 255, 0), 1);
+            // *** 相机中线 ***
+            cv::line(m_rgbImage, cv::Point(m_imgWidth / 2, m_roiY), cv::Point(m_imgWidth / 2, m_roiY + m_roiHeight), cv::Scalar(255, 0, 0), 1);
+            cv::imshow("RGB_WINDOW", m_rgbImage);
+            cv::waitKey(1);
+        }else{
+            // *** 输出深度图 ***
+            cv::imshow("DEPTH", 10 * m_depthImage(cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight)));
+            // *** 输出边缘线 ***
+            cv::imshow("EDGE", m_rgbImage(cv::Rect(m_roiX, m_roiY, m_roiWidth, m_roiHeight)));
+        }
     }
+}
+
+// *** 返回配置路径 ***
+bool Sed_hk::isRT(){
+    return m_flagRT;
 }

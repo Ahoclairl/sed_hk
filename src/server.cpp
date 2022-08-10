@@ -42,7 +42,11 @@ int main(int argc, char *argv[])
     depthPub = it.advertiseCamera(depthTopic, 1);
     ROS_INFO("———————————— 进入 sed_hk 图像检测");
     Sed_hk sed;
-    ROS_INFO("———————————— 订阅话题成功，在图形界面按 's' 键开始检测");
+    if(sed.isRT()){
+        ROS_INFO("———————————— 订阅话题成功，开始实时检测");
+    }else{
+        ROS_INFO("———————————— 订阅话题成功，在图形界面按 's' 键开始检测");
+    }
     // 6. spin()
     ros::spin();
     return 0;
