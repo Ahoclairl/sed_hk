@@ -14,6 +14,8 @@ c. 通过深度差算法检测与地面有一定垂直关系的障碍物**曲线
 
 d. 结合 OpenCV 中的直线拟合检测障碍物**直线边缘**
 
+e. 通过上述算法完成 **30FPS** 的实时边缘检测
+
 具体算法原理参见：
 
 ![rviz](https://github.com/Ahoclairl/sed_hk/blob/master/pic/rviz.png "rviz查看图像")
@@ -59,6 +61,8 @@ c. 回到工作目录，打开终端进行编译
 修改 *config/cam.yaml: m_flagLargeImg* 可以切换 **720p / 360p** 图像模式，**true** 为 **720p**，**false** 为 **360p**
 
 **在 *config/cam.yaml* 中修改分辨率后，还需要修改 *config/config.yaml* 中对应的目标框参数及坐标偏差**
+
+修改 *config/config.yaml: m_flagRT* 可以切换 **实时 / 单帧** 检测模式，**true** 为实时检测，**false** 为单帧检测
 
 修改 *config/config.yaml: m_flagLine* 可以切换 **曲线 / 直线** 检测模式，**true** 为直线检测，**false** 为曲线检测
 
