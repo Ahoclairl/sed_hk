@@ -16,7 +16,7 @@ d. 结合 OpenCV 中的直线拟合检测障碍物**直线边缘**
 
 e. 通过上述算法完成 **30FPS** 的实时边缘检测
 
-具体算法原理参见：
+具体算法原理参见：http://www.v-club.com/home/article/1482
 
 ![rviz](https://github.com/Ahoclairl/sed_hk/blob/master/pic/rviz.png "rviz查看图像")
 
