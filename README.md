@@ -82,10 +82,7 @@ d. **初次运行可能会遇到报错，确保启动步骤正确后再运行即
 
 *研究进行中*
 
-![cover1](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover1.gif "下层识别检测1")
-
-![cover2](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover2.gif "下层识别检测2")
-
-![cover3](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover3.gif "上层识别检测3")
-
-![cover4](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover4.gif "曲线边缘识别检测")
+![Example1](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover1.gif "下层识别检测1")
+![Example2](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover2.gif "下层识别检测2")
+![Example3](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover3.gif "上层识别检测3")
+![Example4](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover4.gif "曲线边缘识别检测")
