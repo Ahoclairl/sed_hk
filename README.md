@@ -75,3 +75,17 @@ b. **该算法需要保证相机与墙面保持一定平行度**
 c. 存在由于光照条件或曝光原因导致有效深度 (*如阶梯边缘*) 丢失而造成的检测偏移
 
 d. **初次运行可能会遇到报错，确保启动步骤正确后再运行即可**
+
+# SED_ROS ———— 结合落差环境识别检测的移动机器人跟随相关研究情况
+
+**适用平台：ARM 架构移动机器人及 ROS 平台**
+
+*研究进行中*
+
+![cover1](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover1.gif "下层识别检测1");
+
+![cover2](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover2.gif "下层识别检测2");
+
+![cover3](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover3.gif "上层识别检测3");
+
+![cover4](https://github.com/Ahoclairl/sed_hk/blob/master/pic/cover4.gif "曲线边缘识别检测");
